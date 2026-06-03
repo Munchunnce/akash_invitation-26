@@ -1,358 +1,901 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="hi">
-<head>
-<meta charset="UTF-8">
-<title>Akash & Preeti — Shubh Vivah 2026</title>
-<link href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Tiro+Devanagari+Hindi&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-<style>
-*{margin:0;padding:0;box-sizing:border-box;}
-html,body{width:480px;height:854px;overflow:hidden;background:#0a0e1a;}
+  <head>
+    <meta charset="UTF-8" />
+    <title>Akash & Preeti — Shubh Vivah 2026</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Tiro+Devanagari+Hindi&family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 480px;
+        height: 854px;
+        overflow: hidden;
+        background: #0a0e1a;
+      }
 
-/* SLIDES */
-.slide{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;opacity:0;transition:opacity 1.2s ease;pointer-events:none;z-index:1;}
-.slide.active{opacity:1;pointer-events:auto;}
+      /* SLIDES */
+      .slide {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 1.2s ease;
+        pointer-events: none;
+        z-index: 1;
+      }
+      .slide.active {
+        opacity: 1;
+        pointer-events: auto;
+      }
 
-/* GLOBAL BG */
-.bg-global{position:absolute;inset:0;background:linear-gradient(160deg,#0d1b3e 0%,#0a0e1a 50%,#1a0d2e 100%);}
+      /* GLOBAL BG */
+      .bg-global {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          160deg,
+          #0d1b3e 0%,
+          #0a0e1a 50%,
+          #1a0d2e 100%
+        );
+      }
 
-/* GOLD PARTICLES CANVAS */
-#particleCanvas{position:fixed;inset:0;z-index:0;pointer-events:none;}
+      /* GOLD PARTICLES CANVAS */
+      #particleCanvas {
+        position: fixed;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+      }
 
-/* === SLIDE 1 — OM Opening === */
-#s1{background:radial-gradient(ellipse at center,#1a2a5e 0%,#0a0e1a 70%);}
-.s1-border{position:absolute;inset:8px;border:2px solid;border-image:linear-gradient(45deg,#c9a227,#f0d060,#c9a227,#f0d060) 1;animation:borderGlow 3s ease-in-out infinite alternate;}
-@keyframes borderGlow{from{filter:drop-shadow(0 0 4px #c9a227);}to{filter:drop-shadow(0 0 16px #f0d060);}}
-.mandala{font-size:100px;color:#c9a227;animation:spin 20s linear infinite,pulse 3s ease-in-out infinite alternate;text-shadow:0 0 40px #c9a22780;}
-@keyframes spin{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
-@keyframes pulse{from{filter:brightness(1);}to{filter:brightness(1.5) drop-shadow(0 0 20px #f0d060);}}
-.om-text{font-size:80px;color:#f0d060;text-shadow:0 0 30px #c9a227,0 0 60px #c9a22750;animation:omPulse 2s ease-in-out infinite alternate;position:absolute;}
-@keyframes omPulse{from{transform:scale(1);text-shadow:0 0 20px #c9a227;}to{transform:scale(1.08);text-shadow:0 0 50px #f0d060,0 0 80px #c9a22780;}}
-.s1-title{font-family:'Rozha One',serif;font-size:28px;color:#f0d060;letter-spacing:4px;margin-top:180px;animation:fadeSlideUp 1.5s 0.5s both;text-shadow:0 0 20px #c9a22760;}
-.s1-sub{font-family:'Tiro Devanagari Hindi',serif;font-size:14px;color:#c9a22790;letter-spacing:2px;margin-top:8px;animation:fadeSlideUp 1.5s 1s both;}
-@keyframes fadeSlideUp{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
+      /* === SLIDE 1 — OM Opening === */
+      #s1 {
+        background: radial-gradient(ellipse at center, #1a2a5e 0%, #0a0e1a 70%);
+      }
+      .s1-border {
+        position: absolute;
+        inset: 8px;
+        border: 2px solid;
+        border-image: linear-gradient(45deg, #c9a227, #f0d060, #c9a227, #f0d060)
+          1;
+        animation: borderGlow 3s ease-in-out infinite alternate;
+      }
+      @keyframes borderGlow {
+        from {
+          filter: drop-shadow(0 0 4px #c9a227);
+        }
+        to {
+          filter: drop-shadow(0 0 16px #f0d060);
+        }
+      }
+      .mandala {
+        font-size: 100px;
+        color: #c9a227;
+        animation:
+          spin 20s linear infinite,
+          pulse 3s ease-in-out infinite alternate;
+        text-shadow: 0 0 40px #c9a22780;
+      }
+      @keyframes spin {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes pulse {
+        from {
+          filter: brightness(1);
+        }
+        to {
+          filter: brightness(1.5) drop-shadow(0 0 20px #f0d060);
+        }
+      }
+      .om-text {
+        font-size: 80px;
+        color: #f0d060;
+        text-shadow:
+          0 0 30px #c9a227,
+          0 0 60px #c9a22750;
+        animation: omPulse 2s ease-in-out infinite alternate;
+        position: absolute;
+      }
+      @keyframes omPulse {
+        from {
+          transform: scale(1);
+          text-shadow: 0 0 20px #c9a227;
+        }
+        to {
+          transform: scale(1.08);
+          text-shadow:
+            0 0 50px #f0d060,
+            0 0 80px #c9a22780;
+        }
+      }
+      .s1-title {
+        font-family: "Rozha One", serif;
+        font-size: 80px;
+        color: #f0d060;
+        letter-spacing: 4px;
+        margin-top: 180px;
+        animation: fadeSlideUp 1.5s 0.5s both;
+        text-shadow: 0 0 20px #c9a22760;
+      }
+      .s1-sub {
+        font-family: "Tiro Devanagari Hindi", serif;
+        font-size: 30px;
+        color: #c9a22790;
+        letter-spacing: 2px;
+        margin-top: 8px;
+        animation: fadeSlideUp 1.5s 1s both;
+      }
+      @keyframes fadeSlideUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
 
-/* === SLIDE 2 — Couple Reveal === */
-#s2{background:linear-gradient(180deg,#0d1b3e 0%,#0a0e1a 100%);}
-.couple-frame{width:380px;height:550px;border-radius:20px;overflow:hidden;border:3px solid #c9a227;box-shadow:0 0 40px #c9a22750,0 20px 60px #00000080;animation:zoomIn 1.5s both;}
-@keyframes zoomIn{from{opacity:0;transform:scale(0.7);}to{opacity:1;transform:scale(1);}}
-.couple-frame img{width:100%;height:100%;object-fit:cover;}
-.couple-names{margin-top:16px;text-align:center;animation:fadeSlideUp 1s 0.8s both;}
-.groom-n{font-family:'Rozha One',serif;font-size:20px;color:#f0d060;text-shadow:0 0 15px #c9a227;}
-.heart{font-size:24px;color:#e74c8b;margin:4px 0;animation:heartbeat 1.2s ease-in-out infinite;}
-@keyframes heartbeat{0%,100%{transform:scale(1);}50%{transform:scale(1.2);}}
-.bride-n{font-family:'Rozha One',serif;font-size:20px;color:#f0d060;text-shadow:0 0 15px #c9a227;}
-.tagline{font-family:'Tiro Devanagari Hindi',serif;font-size:13px;color:#c9a22790;margin-top:8px;letter-spacing:1px;}
+      /* === SLIDE 2 — Couple Reveal === */
+      #s2 {
+        background: linear-gradient(180deg, #0d1b3e 0%, #0a0e1a 100%);
+      }
+      .couple-frame {
+        width: 380px;
+        height: 550px;
+        border-radius: 20px;
+        overflow: hidden;
+        border: 3px solid #c9a227;
+        box-shadow:
+          0 0 40px #c9a22750,
+          0 20px 60px #00000080;
+        animation: zoomIn 1.5s both;
+      }
+      @keyframes zoomIn {
+        from {
+          opacity: 0;
+          transform: scale(0.7);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+      .couple-frame img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .couple-names {
+        margin-top: 16px;
+        text-align: center;
+        animation: fadeSlideUp 1s 0.8s both;
+      }
+      .groom-n {
+        font-family: "Rozha One", serif;
+        font-size: 20px;
+        color: #f0d060;
+        text-shadow: 0 0 15px #c9a227;
+      }
+      .heart {
+        font-size: 24px;
+        color: #e74c8b;
+        margin: 4px 0;
+        animation: heartbeat 1.2s ease-in-out infinite;
+      }
+      @keyframes heartbeat {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.2);
+        }
+      }
+      .bride-n {
+        font-family: "Rozha One", serif;
+        font-size: 20px;
+        color: #f0d060;
+        text-shadow: 0 0 15px #c9a227;
+      }
+      .tagline {
+        font-family: "Tiro Devanagari Hindi", serif;
+        font-size: 13px;
+        color: #c9a22790;
+        margin-top: 8px;
+        letter-spacing: 1px;
+      }
 
-/* === SLIDE 3 — Groom === */
-#s3{background:linear-gradient(160deg,#0d1b3e,#0a0e1a);}
-.photo-circle{width:295px;height:440px;border-radius:150px 150px 120px 120px;overflow:hidden;border:4px solid #c9a227;box-shadow:0 0 50px #c9a22760;animation:zoomIn 1.2s both;margin-bottom:16px;}
-.photo-circle img{width:100%;height:100%;object-fit:cover;object-position:top;}
-.person-label{font-size:11px;color:#c9a22790;letter-spacing:3px;text-transform:uppercase;font-family:'Playfair Display',serif;animation:fadeSlideUp 1s 0.5s both;}
-.person-name{font-family:'Rozha One',serif;font-size:26px;color:#f0d060;text-shadow:0 0 20px #c9a22770;margin:6px 0;animation:fadeSlideUp 1s 0.8s both;}
-.person-detail{font-family:'Tiro Devanagari Hindi',serif;font-size:12px;color:#c9a22780;line-height:2;animation:fadeSlideUp 1s 1s both;text-align:center;}
-.gold-line{width:200px;height:2px;background:linear-gradient(90deg,transparent,#c9a227,transparent);margin:10px auto;animation:fadeSlideUp 1s 1.2s both;}
+      /* === SLIDE 3 — Groom === */
+      #s3 {
+        background: linear-gradient(160deg, #0d1b3e, #0a0e1a);
+      }
+      .photo-circle {
+        width: 295px;
+        height: 440px;
+        border-radius: 150px 150px 120px 120px;
+        overflow: hidden;
+        border: 4px solid #c9a227;
+        box-shadow: 0 0 50px #c9a22760;
+        animation: zoomIn 1.2s both;
+        margin-bottom: 16px;
+      }
+      .photo-circle img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+      }
+      .person-label {
+        font-size: 11px;
+        color: #c9a22790;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        font-family: "Playfair Display", serif;
+        animation: fadeSlideUp 1s 0.5s both;
+      }
+      .person-name {
+        font-family: "Rozha One", serif;
+        font-size: 26px;
+        color: #f0d060;
+        text-shadow: 0 0 20px #c9a22770;
+        margin: 6px 0;
+        animation: fadeSlideUp 1s 0.8s both;
+      }
+      .person-detail {
+        font-family: "Tiro Devanagari Hindi", serif;
+        font-size: 12px;
+        color: #c9a22780;
+        line-height: 2;
+        animation: fadeSlideUp 1s 1s both;
+        text-align: center;
+      }
+      .gold-line {
+        width: 200px;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, #c9a227, transparent);
+        margin: 10px auto;
+        animation: fadeSlideUp 1s 1.2s both;
+      }
 
-/* === SLIDE 4 — Bride === */
-#s4{background:linear-gradient(160deg,#1a0d2e,#0a0e1a);}
+      /* === SLIDE 4 — Bride === */
+      #s4 {
+        background: linear-gradient(160deg, #1a0d2e, #0a0e1a);
+      }
 
-/* === SLIDE 5 — Events === */
-#s5{background:linear-gradient(160deg,#0d1b3e,#0a0e1a);}
-.events-title{font-family:'Rozha One',serif;font-size:22px;color:#f0d060;margin-bottom:16px;animation:fadeSlideUp 1s both;letter-spacing:2px;}
-.events-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;width:420px;animation:fadeSlideUp 1s 0.4s both;}
-.ev-card{background:linear-gradient(135deg,#1a2a5e30,#0d1b3e80);border:1px solid #c9a22740;border-radius:12px;padding:14px 10px;text-align:center;position:relative;overflow:hidden;backdrop-filter:blur(10px);}
-.ev-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#c9a227,#f0d060,#c9a227);}
-.ev-date{font-size:15px;font-weight:bold;color:#f0d060;font-family:'Playfair Display',serif;}
-.ev-day{font-size:11px;color:#c9a22790;margin:2px 0;}
-.ev-name{font-family:'Tiro Devanagari Hindi',serif;font-size:13px;color:#fff;line-height:1.5;}
+      /* === SLIDE 5 — Events === */
+      #s5 {
+        background: linear-gradient(160deg, #0d1b3e, #0a0e1a);
+      }
+      .events-title {
+        font-family: "Rozha One", serif;
+        font-size: 22px;
+        color: #f0d060;
+        margin-bottom: 16px;
+        animation: fadeSlideUp 1s both;
+        letter-spacing: 2px;
+      }
+      .events-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        width: 420px;
+        animation: fadeSlideUp 1s 0.4s both;
+      }
+      .ev-card {
+        background: linear-gradient(135deg, #1a2a5e30, #0d1b3e80);
+        border: 1px solid #c9a22740;
+        border-radius: 12px;
+        padding: 14px 10px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        backdrop-filter: blur(10px);
+      }
+      .ev-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: linear-gradient(90deg, #c9a227, #f0d060, #c9a227);
+      }
+      .ev-date {
+        font-size: 15px;
+        font-weight: bold;
+        color: #f0d060;
+        font-family: "Playfair Display", serif;
+      }
+      .ev-day {
+        font-size: 11px;
+        color: #c9a22790;
+        margin: 2px 0;
+      }
+      .ev-name {
+        font-family: "Tiro Devanagari Hindi", serif;
+        font-size: 13px;
+        color: #fff;
+        line-height: 1.5;
+      }
 
-/* === SLIDE 6 — Venue === */
-#s6{background:radial-gradient(ellipse at center,#1a2a5e 0%,#0a0e1a 70%);}
-.venue-icon{font-size:50px;animation:float 3s ease-in-out infinite;margin-bottom:10px;}
-@keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-12px);}}
-.venue-title{font-family:'Rozha One',serif;font-size:18px;color:#c9a22780;letter-spacing:3px;animation:fadeSlideUp 1s 0.3s both;}
-.venue-name{font-family:'Rozha One',serif;font-size:28px;color:#f0d060;text-shadow:0 0 25px #c9a22770;margin:8px 0;animation:fadeSlideUp 1s 0.6s both;}
-.venue-addr{font-family:'Tiro Devanagari Hindi',serif;font-size:13px;color:#c9a22780;line-height:2;animation:fadeSlideUp 1s 0.9s both;text-align:center;}
-.venue-box{border:2px solid #c9a22750;border-radius:16px;padding:24px 30px;text-align:center;background:linear-gradient(135deg,#1a2a5e20,#0d1b3e40);backdrop-filter:blur(10px);width:400px;animation:zoomIn 1s 0.2s both;}
-.note-text{font-size:11px;color:#c9a22760;margin-top:12px;line-height:1.8;font-family:'Tiro Devanagari Hindi',serif;}
+      /* === SLIDE 6 — Venue === */
+      #s6 {
+        background: radial-gradient(ellipse at center, #1a2a5e 0%, #0a0e1a 70%);
+      }
+      .venue-icon {
+        font-size: 50px;
+        animation: float 3s ease-in-out infinite;
+        margin-bottom: 10px;
+      }
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-12px);
+        }
+      }
+      .venue-title {
+        font-family: "Rozha One", serif;
+        font-size: 18px;
+        color: #c9a22780;
+        letter-spacing: 3px;
+        animation: fadeSlideUp 1s 0.3s both;
+      }
+      .venue-name {
+        font-family: "Rozha One", serif;
+        font-size: 28px;
+        color: #f0d060;
+        text-shadow: 0 0 25px #c9a22770;
+        margin: 8px 0;
+        animation: fadeSlideUp 1s 0.6s both;
+      }
+      .venue-addr {
+        font-family: "Tiro Devanagari Hindi", serif;
+        font-size: 13px;
+        color: #c9a22780;
+        line-height: 2;
+        animation: fadeSlideUp 1s 0.9s both;
+        text-align: center;
+      }
+      .venue-box {
+        border: 2px solid #c9a22750;
+        border-radius: 16px;
+        padding: 24px 30px;
+        text-align: center;
+        background: linear-gradient(135deg, #1a2a5e20, #0d1b3e40);
+        backdrop-filter: blur(10px);
+        width: 400px;
+        animation: zoomIn 1s 0.2s both;
+      }
+      .note-text {
+        font-size: 11px;
+        color: #c9a22760;
+        margin-top: 12px;
+        line-height: 1.8;
+        font-family: "Tiro Devanagari Hindi", serif;
+      }
 
-/* === SLIDE 7 — Closing === */
-#s7{background:radial-gradient(ellipse at center,#1a2a5e 0%,#0a0e1a 70%);}
-.closing-om{font-size:60px;color:#f0d060;text-shadow:0 0 40px #c9a227;animation:omPulse 2s ease-in-out infinite alternate;margin-bottom:10px;}
-.closing-msg{font-family:'Tiro Devanagari Hindi',serif;font-size:15px;color:#c9a22780;line-height:2.2;text-align:center;animation:fadeSlideUp 1s 0.3s both;}
-.host-names{font-family:'Rozha One',serif;font-size:16px;color:#f0d060;margin-top:12px;animation:fadeSlideUp 1s 0.6s both;}
-.mob{font-size:13px;color:#c9a22790;margin-top:6px;animation:fadeSlideUp 1s 0.9s both;}
-.closing-deco{font-size:24px;color:#c9a22760;margin-top:10px;letter-spacing:8px;animation:fadeSlideUp 1s 1.2s both;}
-.shubh{font-family:'Rozha One',serif;font-size:36px;background:linear-gradient(135deg,#c9a227,#f0d060,#c9a227);-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-shadow:none;animation:fadeSlideUp 1s 1.5s both;}
+      /* === SLIDE 7 — Closing === */
+      #s7 {
+        background: radial-gradient(ellipse at center, #1a2a5e 0%, #0a0e1a 70%);
+      }
+      .closing-om {
+        font-size: 60px;
+        color: #f0d060;
+        text-shadow: 0 0 40px #c9a227;
+        animation: omPulse 2s ease-in-out infinite alternate;
+        margin-bottom: 10px;
+      }
+      .closing-msg {
+        font-family: "Tiro Devanagari Hindi", serif;
+        font-size: 15px;
+        color: #c9a22780;
+        line-height: 2.2;
+        text-align: center;
+        animation: fadeSlideUp 1s 0.3s both;
+      }
+      .host-names {
+        font-family: "Rozha One", serif;
+        font-size: 16px;
+        color: #f0d060;
+        margin-top: 12px;
+        animation: fadeSlideUp 1s 0.6s both;
+      }
+      .mob {
+        font-size: 13px;
+        color: #c9a22790;
+        margin-top: 6px;
+        animation: fadeSlideUp 1s 0.9s both;
+      }
+      .closing-deco {
+        font-size: 24px;
+        color: #c9a22760;
+        margin-top: 10px;
+        letter-spacing: 8px;
+        animation: fadeSlideUp 1s 1.2s both;
+      }
+      .shubh {
+        font-family: "Rozha One", serif;
+        font-size: 36px;
+        background: linear-gradient(135deg, #c9a227, #f0d060, #c9a227);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: none;
+        animation: fadeSlideUp 1s 1.5s both;
+      }
 
-/* PROGRESS BAR */
-#progress{position:fixed;bottom:0;left:0;height:3px;background:linear-gradient(90deg,#c9a227,#f0d060);transition:width 0.3s ease;z-index:100;}
+      /* PROGRESS BAR */
+      #progress {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        height: 3px;
+        background: linear-gradient(90deg, #c9a227, #f0d060);
+        transition: width 0.3s ease;
+        z-index: 100;
+      }
 
-/* SLIDE COUNTER */
-#counter{position:fixed;bottom:8px;right:12px;font-size:11px;color:#c9a22760;z-index:100;font-family:'Playfair Display',serif;}
+      /* SLIDE COUNTER */
+      #counter {
+        position: fixed;
+        bottom: 8px;
+        right: 12px;
+        font-size: 11px;
+        color: #c9a22760;
+        z-index: 100;
+        font-family: "Playfair Display", serif;
+      }
 
-/* MUSIC BTN */
-#musicBtn{position:fixed;top:12px;right:12px;background:#c9a22720;border:1px solid #c9a22750;color:#f0d060;border-radius:50%;width:36px;height:36px;font-size:16px;cursor:pointer;z-index:200;transition:all 0.3s;backdrop-filter:blur(10px);}
-#musicBtn:hover{background:#c9a22740;transform:scale(1.1);}
+      /* MUSIC BTN */
+      #musicBtn {
+        position: fixed;
+        top: 12px;
+        right: 12px;
+        background: #c9a22720;
+        border: 1px solid #c9a22750;
+        color: #f0d060;
+        border-radius: 50%;
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
+        cursor: pointer;
+        z-index: 200;
+        transition: all 0.3s;
+        backdrop-filter: blur(10px);
+      }
+      #musicBtn:hover {
+        background: #c9a22740;
+        transform: scale(1.1);
+      }
 
-/* NAV DOTS */
-#dots{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:100;}
-.dot{width:6px;height:6px;border-radius:50%;background:#c9a22730;border:1px solid #c9a22750;cursor:pointer;transition:all 0.3s;}
-.dot.active{background:#f0d060;transform:scale(1.3);}
+      /* NAV DOTS */
+      #dots {
+        position: fixed;
+        bottom: 16px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 8px;
+        z-index: 100;
+      }
+      .dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #c9a22730;
+        border: 1px solid #c9a22750;
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+      .dot.active {
+        background: #f0d060;
+        transform: scale(1.3);
+      }
 
-/* NEXT/PREV */
-.nav-arrow{position:fixed;top:50%;transform:translateY(-50%);background:#c9a22715;border:1px solid #c9a22730;color:#f0d060;width:32px;height:32px;border-radius:50%;font-size:14px;cursor:pointer;z-index:200;display:flex;align-items:center;justify-content:center;transition:all 0.3s;backdrop-filter:blur(6px);}
-.nav-arrow:hover{background:#c9a22740;}
-#prevBtn{left:6px;}
-#nextBtn{right:6px;}
+      /* NEXT/PREV */
+      .nav-arrow {
+        position: fixed;
+        top: 50%;
+        transform: translateY(-50%);
+        background: #c9a22715;
+        border: 1px solid #c9a22730;
+        color: #f0d060;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        font-size: 14px;
+        cursor: pointer;
+        z-index: 200;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s;
+        backdrop-filter: blur(6px);
+      }
+      .nav-arrow:hover {
+        background: #c9a22740;
+      }
+      #prevBtn {
+        left: 6px;
+      }
+      #nextBtn {
+        right: 6px;
+      }
 
-/* BORDER OVERLAY */
-.frame-border{position:fixed;inset:0;pointer-events:none;z-index:50;border:3px solid transparent;border-image:linear-gradient(45deg,#c9a22780,#f0d06040,#c9a22780,#f0d06040) 1;}
-</style>
-</head>
-<audio id="bgMusic" loop>
-    <source src="song.mp3" type="audio/mpeg">
-</audio>
-<body>
+      /* BORDER OVERLAY */
+      .frame-border {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 50;
+        border: 3px solid transparent;
+        border-image: linear-gradient(
+            45deg,
+            #c9a22780,
+            #f0d06040,
+            #c9a22780,
+            #f0d06040
+          )
+          1;
+      }
+    </style>
+  </head>
+  <audio id="bgMusic" loop>
+    <source src="song.mp3" type="audio/mpeg" />
+  </audio>
+  <body>
+    <canvas id="particleCanvas"></canvas>
+    <div class="frame-border"></div>
+    <button id="musicBtn" onclick="toggleMusic()">🎵</button>
+    <button class="nav-arrow" id="prevBtn" onclick="changeSlide(-1)">‹</button>
+    <button class="nav-arrow" id="nextBtn" onclick="changeSlide(1)">›</button>
+    <div id="progress"></div>
+    <div id="counter">1 / 7</div>
+    <div id="dots"></div>
 
-<canvas id="particleCanvas"></canvas>
-<div class="frame-border"></div>
-<button id="musicBtn" onclick="toggleMusic()">🎵</button>
-<button class="nav-arrow" id="prevBtn" onclick="changeSlide(-1)">‹</button>
-<button class="nav-arrow" id="nextBtn" onclick="changeSlide(1)">›</button>
-<div id="progress"></div>
-<div id="counter">1 / 7</div>
-<div id="dots"></div>
-
-<!-- SLIDE 1: OM Opening -->
-<div class="slide active" id="s1">
-  <div style="position:relative;display:flex;align-items:center;justify-content:center;width:180px;height:180px;">
-    <div class="mandala" style="position:absolute;font-size:130px;opacity:0.15;">✿</div>
-    <div class="om-text">ॐ</div>
-  </div>
-  <div class="s1-title">शुभ विवाह</div>
-  <div class="s1-sub">|| श्री गणेशाय नम: ||</div>
-  <div style="margin-top:16px;font-family:'Tiro Devanagari Hindi',serif;font-size:13px;color:#c9a22780;text-align:center;line-height:2;animation:fadeSlideUp 1.5s 1.5s both;padding:0 40px;">
-    मंगलम् भगवान विष्णु, मंगलम् गरुड़ध्वज: ।<br>
-    मंगलम् पुण्डरीकाक्ष:, मंगलाय तनोऽहरि: ।।
-  </div>
-  <div style="margin-top:20px;font-family:'Tiro Devanagari Hindi',serif;font-size:12px;color:#c9a22760;letter-spacing:1px;animation:fadeSlideUp 1.5s 2s both;">
-    परमपिता परमेश्वर की असीम अनुकम्पा से...
-  </div>
-  <div class="s1-border"></div>
-</div>
-
-<!-- SLIDE 2: Couple Together -->
-<div class="slide" id="s2">
-  <div class="couple-frame">
-    <img src="both.jpeg" alt="Akash & Preeti" style="object-fit:cover;width:100%;height:100%;">
-  </div>
-  <div class="couple-names">
-    <div class="groom-n">अकाश कुमार चौधरी</div>
-    <div class="heart">♥</div>
-    <div class="bride-n">प्रीति कुमारी</div>
-    <div class="tagline">के मंगल परिणय में आपका हार्दिक स्वागत है</div>
-  </div>
-</div>
-
-<!-- SLIDE 3: Groom -->
-<div class="slide" id="s3">
-  <div class="person-label">वर</div>
-  <div class="photo-circle">
-    <img src="couple.jpeg" alt="Akash" style="object-fit:cover;width:100%;height:100%;object-position:center top;">
-  </div>
-  <div class="gold-line"></div>
-  <div class="person-name">आयुष्मान् अकाश कुमार चौधरी</div>
-  <div class="person-detail">
-    प्रथम सुपुत्र<br>
-    श्री दिनेश चौधरी एवं श्रीमती संगीता देवी<br>
-    <span style="font-size:11px;">ग्राम-सलेमपुर, सुतुरखाना, पो0-बांक<br>थाना-मुफिसल, जिला-मुंगेर–811201</span>
-  </div>
-</div>
-
-<!-- SLIDE 4: Bride -->
-<div class="slide" id="s4">
-  <div class="person-label">वधू</div>
-  <div class="photo-circle">
-    <img src="priti.jpeg" alt="Preeti" style="object-fit:cover;width:100%;height:100%;object-position:center top;">
-  </div>
-  <div class="gold-line"></div>
-  <div class="person-name">आयुष्मती प्रीति कुमारी</div>
-  <div class="person-detail">
-    सुपुत्री<br>
-    स्व. उमेश चौधरी एवं श्रीमती गीता देवी<br>
-    <span style="font-size:11px;">ग्राम-मुरजपुर, मुरोहा, पो0-मुरोहा<br>बिहार शरीफ (नालंदा)</span>
-  </div>
-</div>
-
-<!-- SLIDE 5: Events -->
-<div class="slide" id="s5">
-  <div class="events-title">✦ वैवाहिक कार्यक्रम ✦</div>
-  <div class="events-grid">
-    <div class="ev-card">
-      <div class="ev-date">06.07.2026</div>
-      <div class="ev-day">सोमवार</div>
-      <div class="ev-name">हल्दी एवं मेंहदी</div>
+    <!-- SLIDE 1: OM Opening -->
+    <div class="slide active" id="s1">
+      <div
+        style="
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 180px;
+          height: 180px;
+        "
+      >
+        <div
+          class="mandala"
+          style="position: absolute; font-size: 130px; opacity: 0.15"
+        >
+          ✿
+        </div>
+        <div class="om-text">ॐ</div>
+      </div>
+      <div class="s1-title">शुभ विवाह</div>
+      <div class="s1-sub">|| श्री गणेशाय नम: ||</div>
+      <div
+        style="
+          margin-top: 16px;
+          font-family: &quot;Tiro Devanagari Hindi&quot;, serif;
+          font-size: 52px;
+          color: #c9a22780;
+          text-align: center;
+          line-height: 2;
+          animation: fadeSlideUp 1.5s 1.5s both;
+          padding: 0 40px;
+        "
+      >
+        मंगलम् भगवान विष्णु, मंगलम् गरुड़ध्वज: ।<br />
+        मंगलम् पुण्डरीकाक्ष:, मंगलाय तनोऽहरि: ।।
+      </div>
+      <div
+        style="
+          margin-top: 20px;
+          font-family: &quot;Tiro Devanagari Hindi&quot;, serif;
+          font-size: 27px;
+          color: #c9a22760;
+          letter-spacing: 1px;
+          animation: fadeSlideUp 1.5s 2s both;
+        "
+      >
+        परमपिता परमेश्वर की असीम अनुकम्पा से...
+      </div>
+      <div class="s1-border"></div>
     </div>
-    <div class="ev-card">
-      <div class="ev-date">07.07.2026</div>
-      <div class="ev-day">मंगलवार</div>
-      <div class="ev-name">मंडपूजा एवं घृतढ़ारी</div>
+
+    <!-- SLIDE 2: Couple Together -->
+    <div class="slide" id="s2">
+      <div class="couple-frame">
+        <img
+          src="both.jpeg"
+          alt="Akash & Preeti"
+          style="object-fit: cover; width: 100%; height: 100%"
+        />
+      </div>
+      <div class="couple-names">
+        <div class="groom-n">अकाश कुमार चौधरी</div>
+        <div class="heart">♥</div>
+        <div class="bride-n">प्रीति कुमारी</div>
+        <div class="tagline">के मंगल परिणय में आपका हार्दिक स्वागत है</div>
+      </div>
     </div>
-    <div class="ev-card" style="border-color:#f0d06090;">
-      <div class="ev-date" style="font-size:17px;">08.07.2026</div>
-      <div class="ev-day">बुधवार</div>
-      <div class="ev-name" style="color:#f0d060;font-weight:bold;">बारात एवं<br>शुभ विवाह 🌙</div>
+
+    <!-- SLIDE 3: Groom -->
+    <div class="slide" id="s3">
+      <div class="person-label">वर</div>
+      <div class="photo-circle">
+        <img
+          src="couple.jpeg"
+          alt="Akash"
+          style="
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            object-position: center top;
+          "
+        />
+      </div>
+      <div class="gold-line"></div>
+      <div class="person-name">आयुष्मान् अकाश कुमार चौधरी</div>
+      <div class="person-detail">
+        प्रथम सुपुत्र<br />
+        श्री दिनेश चौधरी एवं श्रीमती संगीता देवी<br />
+        <span style="font-size: 11px"
+          >ग्राम-सलेमपुर, सुतुरखाना, पो0-बांक<br />थाना-मुफिसल,
+          जिला-मुंगेर–811201</span
+        >
+      </div>
     </div>
-    <div class="ev-card">
-      <div class="ev-date">10.07.2026</div>
-      <div class="ev-day">शुक्रवार</div>
-      <div class="ev-name">वर-वधू स्वागत<br>एवं प्रीतिभोज</div>
+
+    <!-- SLIDE 4: Bride -->
+    <div class="slide" id="s4">
+      <div class="person-label">वधू</div>
+      <div class="photo-circle">
+        <img
+          src="priti.jpeg"
+          alt="Preeti"
+          style="
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            object-position: center top;
+          "
+        />
+      </div>
+      <div class="gold-line"></div>
+      <div class="person-name">आयुष्मती प्रीति कुमारी</div>
+      <div class="person-detail">
+        सुपुत्री<br />
+        स्व. उमेश चौधरी एवं श्रीमती गीता देवी<br />
+        <span style="font-size: 11px"
+          >ग्राम-मुरजपुर, मुरोहा, पो0-मुरोहा<br />बिहार शरीफ (नालंदा)</span
+        >
+      </div>
     </div>
-  </div>
-  <div style="margin-top:12px;font-size:11px;color:#c9a22760;text-align:center;font-family:'Tiro Devanagari Hindi',serif;animation:fadeSlideUp 1s 1s both;padding:0 20px;">
-    सं. 07 बजे से आपके आने तक
-  </div>
-</div>
 
-<!-- SLIDE 6: Venue -->
-<div class="slide" id="s6">
-  <div class="venue-icon">🏛️</div>
-  <div class="venue-box">
-    <div class="venue-title">✦ वर-वधू स्वागत एवं प्रीतिभोज स्थल ✦</div>
-    <div class="venue-name">मून लाईट</div>
-    <div class="venue-addr">पूरबसराय, मुंगेर</div>
-    <div class="gold-line" style="animation:none;opacity:1;margin:12px auto;"></div>
-    <div class="note-text">
-      नोट : बारात हमारे निवास स्थान सलेमपुर सुतुरखाना,<br>
-      मुंगेर से दिन के 01 बजे भगवती मैरेज हॉल,<br>
-      मुरोहा, बिहार शरीफ के लिए प्रस्थान करेगी।
+    <!-- SLIDE 5: Events -->
+    <div class="slide" id="s5">
+      <div class="events-title">✦ वैवाहिक कार्यक्रम ✦</div>
+      <div class="events-grid">
+        <div class="ev-card">
+          <div class="ev-date">06.07.2026</div>
+          <div class="ev-day">सोमवार</div>
+          <div class="ev-name">हल्दी एवं मेंहदी</div>
+        </div>
+        <div class="ev-card">
+          <div class="ev-date">07.07.2026</div>
+          <div class="ev-day">मंगलवार</div>
+          <div class="ev-name">मंडपूजा एवं घृतढ़ारी</div>
+        </div>
+        <div class="ev-card" style="border-color: #f0d06090">
+          <div class="ev-date" style="font-size: 17px">08.07.2026</div>
+          <div class="ev-day">बुधवार</div>
+          <div class="ev-name" style="color: #f0d060; font-weight: bold">
+            बारात एवं<br />शुभ विवाह 🌙
+          </div>
+        </div>
+        <div class="ev-card">
+          <div class="ev-date">10.07.2026</div>
+          <div class="ev-day">शुक्रवार</div>
+          <div class="ev-name">वर-वधू स्वागत<br />एवं प्रीतिभोज</div>
+        </div>
+      </div>
+      <div
+        style="
+          margin-top: 12px;
+          font-size: 11px;
+          color: #c9a22760;
+          text-align: center;
+          font-family: &quot;Tiro Devanagari Hindi&quot;, serif;
+          animation: fadeSlideUp 1s 1s both;
+          padding: 0 20px;
+        "
+      >
+        सं. 07 बजे से आपके आने तक
+      </div>
     </div>
-  </div>
-</div>
 
-<!-- SLIDE 7: Closing -->
-<div class="slide" id="s7">
-  <div class="closing-om">ॐ</div>
-  <div class="shubh">शुभ विवाह</div>
-  <div class="gold-line" style="animation:none;opacity:1;"></div>
-  <div class="closing-msg">
-    के शुभ अवसर पर सहभागी होकर<br>
-    हम पर उपकार करें,<br>
-    सदा भरी रहे खुशियाँ आँगन में,<br>
-    नवयुगलो को सुखी दाम्पत्य का<br>
-    आशीर्वाद प्रदान करें ।
-  </div>
-  <div class="host-names">
-    दर्शनाभिलाषी : समरत चौधरी परिवार<br>
-    आकांक्षी : श्री दिनेश चौधरी
-  </div>
-  <div class="mob">📞 6206385019 | 9661621794</div>
-  <div class="closing-deco">✿ ✾ ✿ ✾ ✿</div>
-</div>
+    <!-- SLIDE 6: Venue -->
+    <div class="slide" id="s6">
+      <div class="venue-icon">🏛️</div>
+      <div class="venue-box">
+        <div class="venue-title">✦ वर-वधू स्वागत एवं प्रीतिभोज स्थल ✦</div>
+        <div class="venue-name">मून लाईट</div>
+        <div class="venue-addr">पूरबसराय, मुंगेर</div>
+        <div
+          class="gold-line"
+          style="animation: none; opacity: 1; margin: 12px auto"
+        ></div>
+        <div class="note-text">
+          नोट : बारात हमारे निवास स्थान सलेमपुर सुतुरखाना,<br />
+          मुंगेर से दिन के 01 बजे भगवती मैरेज हॉल,<br />
+          मुरोहा, बिहार शरीफ के लिए प्रस्थान करेगी।
+        </div>
+      </div>
+    </div>
 
-<script>
-// SLIDES
-const slides = document.querySelectorAll('.slide');
-const totalSlides = slides.length;
-let current = 0;
-let autoTimer;
+    <!-- SLIDE 7: Closing -->
+    <div class="slide" id="s7">
+      <div class="closing-om">ॐ</div>
+      <div class="shubh">शुभ विवाह</div>
+      <div class="gold-line" style="animation: none; opacity: 1"></div>
+      <div class="closing-msg">
+        के शुभ अवसर पर सहभागी होकर<br />
+        हम पर उपकार करें,<br />
+        सदा भरी रहे खुशियाँ आँगन में,<br />
+        नवयुगलो को सुखी दाम्पत्य का<br />
+        आशीर्वाद प्रदान करें ।
+      </div>
+      <div class="host-names">
+        दर्शनाभिलाषी : समरत चौधरी परिवार<br />
+        आकांक्षी : श्री दिनेश चौधरी
+      </div>
+      <div class="mob">📞 6206385019 | 9661621794</div>
+      <div class="closing-deco">✿ ✾ ✿ ✾ ✿</div>
+    </div>
 
-// DOTS
-const dotsEl = document.getElementById('dots');
-slides.forEach((_,i)=>{
-  const d = document.createElement('div');
-  d.className = 'dot' + (i===0?' active':'');
-  d.onclick = ()=>goTo(i);
-  dotsEl.appendChild(d);
-});
+    <script>
+      // SLIDES
+      const slides = document.querySelectorAll(".slide");
+      const totalSlides = slides.length;
+      let current = 0;
+      let autoTimer;
 
-function goTo(n){
-  slides[current].classList.remove('active');
-  document.querySelectorAll('.dot')[current].classList.remove('active');
-  current = (n+totalSlides)%totalSlides;
-  slides[current].classList.add('active');
-  document.querySelectorAll('.dot')[current].classList.add('active');
-  document.getElementById('progress').style.width = ((current+1)/totalSlides*100)+'%';
-  document.getElementById('counter').textContent = (current+1)+' / '+totalSlides;
-  resetTimer();
-}
+      // DOTS
+      const dotsEl = document.getElementById("dots");
+      slides.forEach((_, i) => {
+        const d = document.createElement("div");
+        d.className = "dot" + (i === 0 ? " active" : "");
+        d.onclick = () => goTo(i);
+        dotsEl.appendChild(d);
+      });
 
-function changeSlide(dir){ goTo(current+dir); }
+      function goTo(n) {
+        slides[current].classList.remove("active");
+        document.querySelectorAll(".dot")[current].classList.remove("active");
+        current = (n + totalSlides) % totalSlides;
+        slides[current].classList.add("active");
+        document.querySelectorAll(".dot")[current].classList.add("active");
+        document.getElementById("progress").style.width =
+          ((current + 1) / totalSlides) * 100 + "%";
+        document.getElementById("counter").textContent =
+          current + 1 + " / " + totalSlides;
+        resetTimer();
+      }
 
-function resetTimer(){
-  clearInterval(autoTimer);
-  autoTimer = setInterval(()=>goTo(current+1), 5000);
-}
-resetTimer();
-document.getElementById('progress').style.width = (1/totalSlides*100)+'%';
+      function changeSlide(dir) {
+        goTo(current + dir);
+      }
 
-// KEYBOARD
-document.addEventListener('keydown',e=>{
-  if(e.key==='ArrowRight'||e.key===' ')changeSlide(1);
-  if(e.key==='ArrowLeft')changeSlide(-1);
-});
+      function resetTimer() {
+        clearInterval(autoTimer);
+        autoTimer = setInterval(() => goTo(current + 1), 5000);
+      }
+      resetTimer();
+      document.getElementById("progress").style.width =
+        (1 / totalSlides) * 100 + "%";
 
-// TOUCH SWIPE
-let tx=0;
-document.addEventListener('touchstart',e=>tx=e.touches[0].clientX);
-document.addEventListener('touchend',e=>{
-  const diff=tx-e.changedTouches[0].clientX;
-  if(Math.abs(diff)>40)changeSlide(diff>0?1:-1);
-});
+      // KEYBOARD
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowRight" || e.key === " ") changeSlide(1);
+        if (e.key === "ArrowLeft") changeSlide(-1);
+      });
 
-// PARTICLE SYSTEM
-const canvas = document.getElementById('particleCanvas');
-const ctx = canvas.getContext('2d');
-canvas.width=480; canvas.height=854;
-const particles=[];
-for(let i=0;i<60;i++) particles.push({
-  x:Math.random()*480, y:Math.random()*854,
-  r:Math.random()*2.5+0.5,
-  vx:(Math.random()-0.5)*0.4,
-  vy:-(Math.random()*0.8+0.2),
-  alpha:Math.random()*0.6+0.2,
-  color:Math.random()>0.5?'#c9a227':'#f0d060'
-});
+      // TOUCH SWIPE
+      let tx = 0;
+      document.addEventListener(
+        "touchstart",
+        (e) => (tx = e.touches[0].clientX),
+      );
+      document.addEventListener("touchend", (e) => {
+        const diff = tx - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 40) changeSlide(diff > 0 ? 1 : -1);
+      });
 
-function animParticles(){
-  ctx.clearRect(0,0,480,854);
-  particles.forEach(p=>{
-    p.x+=p.vx; p.y+=p.vy;
-    if(p.y<-10){p.y=864;p.x=Math.random()*480;}
-    if(p.x<0)p.x=480; if(p.x>480)p.x=0;
-    ctx.beginPath();
-    ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-    ctx.fillStyle=p.color;
-    ctx.globalAlpha=p.alpha;
-    ctx.fill();
-  });
-  ctx.globalAlpha=1;
-  requestAnimationFrame(animParticles);
-}
-animParticles();
+      // PARTICLE SYSTEM
+      const canvas = document.getElementById("particleCanvas");
+      const ctx = canvas.getContext("2d");
+      canvas.width = 480;
+      canvas.height = 854;
+      const particles = [];
+      for (let i = 0; i < 60; i++)
+        particles.push({
+          x: Math.random() * 480,
+          y: Math.random() * 854,
+          r: Math.random() * 2.5 + 0.5,
+          vx: (Math.random() - 0.5) * 0.4,
+          vy: -(Math.random() * 0.8 + 0.2),
+          alpha: Math.random() * 0.6 + 0.2,
+          color: Math.random() > 0.5 ? "#c9a227" : "#f0d060",
+        });
 
-// WEB AUDIO — Indian Classical Ambient
-const bgMusic = document.getElementById("bgMusic");
+      function animParticles() {
+        ctx.clearRect(0, 0, 480, 854);
+        particles.forEach((p) => {
+          p.x += p.vx;
+          p.y += p.vy;
+          if (p.y < -10) {
+            p.y = 864;
+            p.x = Math.random() * 480;
+          }
+          if (p.x < 0) p.x = 480;
+          if (p.x > 480) p.x = 0;
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+          ctx.fillStyle = p.color;
+          ctx.globalAlpha = p.alpha;
+          ctx.fill();
+        });
+        ctx.globalAlpha = 1;
+        requestAnimationFrame(animParticles);
+      }
+      animParticles();
 
-// Page load par play karne ki koshish
-window.addEventListener("load", () => {
-    bgMusic.play().then(() => {
-        document.getElementById("musicBtn").textContent = "🔊";
-    }).catch(() => {
-        console.log("Autoplay blocked by browser");
-    });
-});
+      // WEB AUDIO — Indian Classical Ambient
+      const bgMusic = document.getElementById("bgMusic");
 
-function toggleMusic() {
-    if (bgMusic.paused) {
-        bgMusic.play();
-        document.getElementById("musicBtn").textContent = "🔊";
-    } else {
-        bgMusic.pause();
-        document.getElementById("musicBtn").textContent = "🎵";
-    }
-}
+      // Page load par play karne ki koshish
+      window.addEventListener("load", () => {
+        bgMusic
+          .play()
+          .then(() => {
+            document.getElementById("musicBtn").textContent = "🔊";
+          })
+          .catch(() => {
+            console.log("Autoplay blocked by browser");
+          });
+      });
 
-</script>
-</body>
+      function toggleMusic() {
+        if (bgMusic.paused) {
+          bgMusic.play();
+          document.getElementById("musicBtn").textContent = "🔊";
+        } else {
+          bgMusic.pause();
+          document.getElementById("musicBtn").textContent = "🎵";
+        }
+      }
+    </script>
+  </body>
 </html>
